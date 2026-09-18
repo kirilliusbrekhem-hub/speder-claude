@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Solace City — Web Runner</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="viewport"></canvas>
+
+  <div id="hud">
+    <div id="topBar">
+      <div id="healthWrap">
+        <div id="healthLabel">HEALTH</div>
+        <div id="healthBarBg"><div id="healthBarFill"></div></div>
+      </div>
+      <div id="webWrap">
+        <div id="webLabel">WEB FLUID</div>
+        <div id="webBarBg"><div id="webBarFill"></div></div>
+      </div>
+    </div>
+
+    <div id="missionBox">
+      <div id="missionTitle">Mission</div>
+      <div id="missionText">—</div>
+    </div>
+
+    <div id="comboBox" class="hidden">
+      <span id="comboCount">0</span> COMBO
+    </div>
+
+    <div id="crosshair"></div>
+
+    <div id="controlsHint">
+      WASD move · Mouse look · Shift sprint · Space jump / release web · Hold LMB in air: swing · F: strike
+    </div>
+  </div>
+
+  <div id="startOverlay">
+    <h1>SOLACE CITY</h1>
+    <p class="tagline">An original web-slinging hero prototype</p>
+    <p class="desc">
+      You are <strong>VOLT</strong>, an amateur inventor whose experimental
+      grapple-web harness turned you into the city's unofficial guardian.
+      Swing between the towers of Solace City, take down rogue Sentinel
+      drones and protect the skyline.
+    </p>
+    <button id="startBtn">Click to Begin</button>
+    <p class="hint">Mouse will be captured for camera control. Press ESC anytime to pause.</p>
+  </div>
+
+  <div id="pauseOverlay" class="hidden">
+    <h2>Paused</h2>
+    <button id="resumeBtn">Resume</button>
+  </div>
+
+  <div id="bannerOverlay" class="hidden">
+    <div id="bannerText"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
